@@ -1,5 +1,5 @@
 # Javascript
-- Fundamentos de JavaScript
+- JavaScript fundamentals
    - [Data types](#Data-types-javascript)
    - Javascript Functions
    - Objects
@@ -96,3 +96,27 @@ The object data type can contain:
 1. An object
 2. An array
 3. A date
+
+## Exercise Data types
+# Ejercicio: Sistema de Tipos de Datos y Conversión
+
+## Descripción
+Vas a crear un sistema que permita al usuario introducir datos y el programa deberá identificar el tipo de dato, y proporcionar opciones para convertirlo a otros tipos de datos si es posible.
+
+## Detalles
+
+### Identificación de tipos de datos
+- Usa `typeof` para identificar el tipo de dato que el usuario ha introducido.
+
+### Funciones
+- `identificarTipo(dato)`: Esta función recibe un dato y devuelve su tipo.
+- `convertirANumero(dato)`: Convierte el dato a número si es posible. Si no es posible, devuelve un mensaje indicándolo.
+- `convertirAString(dato)`: Convierte el dato a string.
+- `convertirABooleano(dato)`: Convierte el dato a booleano si es posible. Si no es posible, devuelve un mensaje indicándolo.
+
+### Control de flujo
+- Usa `if`, `else if`, y `else` para manejar las diferentes opciones de conversión según el tipo de dato que se ha introducido.
+
+### Desafíos adicionales
+- Añade una funcionalidad que permita al usuario convertir el dato introducido a un objeto con propiedades que representen las conversiones (por ejemplo, `datoOriginal`, `comoNumero`, `comoString`, `comoBooleano`).
+- Permite la conversión a otros tipos de datos como Array o Date si es posible.
