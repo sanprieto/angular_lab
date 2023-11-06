@@ -97,6 +97,71 @@ The object data type can contain:
 2. An array
 3. A date
 
+# Conversiones de Tipos en JavaScript
+
+En JavaScript, los valores de ciertos tipos de datos se pueden convertir o coercionar a otros tipos de datos. A continuación, se enumeran las conversiones más comunes que se pueden realizar con cada tipo:
+
+## String
+
+- **A Number**: 
+  - Usando `Number(str)`, `+str` o `parseFloat(str)`. 
+  - Si el string no es un número válido, devuelve `NaN`.
+- **A Boolean**: 
+  - Usando `Boolean(str)`. 
+  - Un string vacío se convierte en `false`, cualquier otro string (incluyendo uno con solo espacios) se convierte en `true`.
+
+## Number
+
+- **A String**: 
+  - Usando `String(num)` o `num.toString()`.
+- **A Boolean**: 
+  - Usando `Boolean(num)`. 
+  - `0` y `NaN` se convierten en `false`, cualquier otro número se convierte en `true`.
+
+## Boolean
+
+- **A String**: 
+  - Usando `String(bool)`.
+- **A Number**: 
+  - Usando `Number(bool)`. 
+  - `true` se convierte en `1` y `false` se convierte en `0`.
+
+## Object
+
+- **A String**: 
+  - Generalmente usando `String(obj)` o `obj.toString()`, pero la implementación exacta depende del objeto específico.
+- **A Number**: 
+  - Generalmente usando `Number(obj)`, pero la implementación exacta depende del objeto.
+
+## Null
+
+- **A String**: 
+  - Usando `String(null)`, devuelve `'null'`.
+- **A Number**: 
+  - Usando `Number(null)`, devuelve `0`.
+- **A Boolean**: 
+  - Siempre se convierte en `false`.
+
+## Undefined
+
+- **A String**: 
+  - Usando `String(undefined)`, devuelve `'undefined'`.
+- **A Number**: 
+  - Usando `Number(undefined)`, devuelve `NaN`.
+- **A Boolean**: 
+  - Siempre se convierte en `false`.
+
+## Symbol
+
+- **Nota**: No se puede convertir directamente a **String** o **Number** sin generar un error. Sin embargo, se puede acceder a su descripción usando la propiedad `.description`.
+
+## BigInt
+
+- **Nota**: No se puede convertir automáticamente a **Number** porque puede haber pérdida de precisión. Sin embargo, se puede hacer manualmente usando `Number(bigint)`, pero con precaución.
+- **A String**: 
+  - Usando `String(bigint)` o `bigint.toString()`.
+
+
 ## Exercise Data types
 # Ejercicio: Sistema de Tipos de Datos y Conversión
 
