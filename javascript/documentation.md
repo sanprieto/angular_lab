@@ -99,41 +99,26 @@ The object data type can contain:
 
 ## Exercise Data types
 # Ejercicio: Sistema de Tipos de Datos y Conversión
-# Sistema de gestión de inventario con tipos de datos y conversión
 
-## Objetivo
-Desarrollar un sistema básico de gestión de inventario que utilice diversos tipos de datos en JavaScript y que implemente operaciones de conversión entre ellos.
+# Sistema de Gestión y Conversión de Tipos de Datos
 
-## Instrucciones
+## Funcionalidades Esenciales
 
-### 1. Entrada de productos:    
-   * **Nombre:** Pide al usuario ingresar el nombre de un producto.
-   * **Cantidad:** Solicita la cantidad del producto en existencia.
-   * **Precio:** Pregunta por el precio del producto.
+### Entrada de Datos
+- El sistema debe permitir al usuario ingresar un dato para su análisis y conversión.
 
-### 2. Conversión de datos:
-   * **Nombre:** Asegúrate de que el nombre del producto sea una cadena de texto.
-   * **Cantidad:** Convierte la cantidad del producto en un número entero.
-   * **Precio:** Convierte el precio del producto en un número con decimales (float).
+### Identificación de Tipo de Dato
+- Automáticamente identificar el tipo de dato ingresado utilizando `typeof` o un método equivalente.
 
-### 3. Almacenamiento:
-   * **Objeto:** Almacena la información del producto en un objeto.
-   * **Inventario:** Añade el objeto a un array que representará el inventario.
+### Opciones de Conversión
+- Presentar al usuario las posibles conversiones para el tipo de dato ingresado.
 
-### 4. Consultas:
-   * **Búsqueda:** Permite al usuario realizar consultas por nombre de producto.
-   * **Resultado:** Muestra la cantidad en existencia y el precio del producto solicitado.
+### Realización de la Conversión
+- Ejecutar la conversión seleccionada por el usuario y mostrar el resultado.
 
-### 5. Modificación:
-   * **Edición:** Permite al usuario modificar la cantidad o el precio de un producto existente.
+### Manejo de Errores
+- Proporcionar mensajes de error claros cuando el usuario intente una conversión no válida.
 
-### 6. Reportes:
-   * **Alerta:** Genera un reporte de los productos con baja existencia (por ejemplo, cantidad < 10).
-   * **Valor Total:** Muestra el valor total del inventario (suma de todos los productos considerando su precio y cantidad).
+### Control de Flujo
+- Utilizar estructuras condicionales (`if`, `else if`, `else`) para gestionar las conversiones y errores.
 
-### 7. Conversión avanzada:
-   * **Exportación:** Implementa una funcionalidad para convertir todo el inventario a un formato JSON para su exportación.
-   * **Importación:** Permite al usuario importar un inventario en formato JSON y convierte este texto al formato de array de objetos en el programa.
-
-### 8. Tipos de dato adicionales:
-   * **Validación:** Si el usuario introduce un valor no válido para cantidad o precio (por ejemplo, una cadena de texto que no se puede convertir
