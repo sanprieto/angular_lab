@@ -1,40 +1,58 @@
-
-function giveMeData(theData){
-
-    //Symbol no se puede convertir a string
-    if(typeof theData === 'symbol'&& typeof theData != undefined ){
-        console.log(theData.toString() + 'is a symbol'+ '\n') ;
-    }else{
-        //Comprobamos si el tipo de dato se puede convertir a un string
-        let theString = "\"" + theData + "\"";
-        console.log('the type ' + typeof theData +' can convert to' + typeof theString + '\n');
+function convertData(theData){
+    if(theData === null){
+        console.log( 'the value is ' + String(theData));
+        console.log( 'with typeof return ' + typeof theData);
+        console.log( 'is a ' + String(theData),'with Number() return', Number(theData));
+        console.log( 'is a ' + String(theData),'with Boolean() return', Boolean(theData));
+        return;
     }
-    //Comprobamos si es correcto convertir un string a number
-    if(typeof theData === 'string'){
-        //Utilizamos isNaN() porque NaN es un valor especial y no funciona con == NaN
-        if(isNaN(parseInt(theData, 10))){ 
-            console.log('Not recomendation conver to number')
-        }else{
-            console.log( typeof stringToNumber + 'can convert to number'+ '\n');
-        }
-        
+    switch(typeof theData){
+        case 'number':
+                console.log('is a ', typeof theData);
+                console.log('can convert to :', typeof String(theData));
+                console.log('can convert to :', typeof theData.toString());
+                console.log('can convert to :', typeof Boolean(theData), Boolean(theData));
+                console.log('can convert to :', typeof new Number(theData));
+                try{
+                    console.log('can convert to :', typeof BigInt(theData));
+                }catch(error){
+                    console.log('cannnot convert to BigIng', error.message);
+                }
+        break;
+        case 'string':
+                console.log('is a ', typeof theData);
+                console.log('can convert to :', typeof Number(theData));
+                console.log('can convert to :', typeof parseFloat(theData), parseFloat(theData));
+                console.log('can convert to :', typeof Boolean(theData), Boolean(theData));
+                console.log('can convert to :', typeof new Number(theData));
+
+        break;
+        case 'object':
+            console.log('is a ', typeof theData);
+            console.log('can convert to :', typeof theData.toString());
+            console.log('can convert to :', typeof Number(theData));
+            console.log('can convert to :', typeof Boolean(theData), Boolean(theData));
+
+        break;
+        case 'undefined':
+            console.log('is a ', typeof theData);
+            console.log('with String() return :', String(theData));
+            console.log('with Number() return :', Number(theData));
+            console.log('with Boolean() return :', Boolean(theData));
+        break;
+        default:
+        break;
     }
-    return theData +' is a '+ typeof theData + '\n';
+    return typeof theData;
 
 }
+console.log(convertData(undefined));// undefined
+console.log(convertData(null)); // null es un error histórico devuelve object
+console.log(convertData({})); // object
+console.log(convertData('111'))// string with numbers
+console.log(convertData('pep'))// string
+console.log(convertData(''))// empty string
+console.log(convertData(1))// number
+console.log(convertData(0))// number
+console.log(convertData(1.02))// number with decimal
 
-let symbol = Symbol('description');
-
-console.log(
-    giveMeData(40),
-    giveMeData([]),
-    giveMeData({}),
-    giveMeData('string'),
-    giveMeData(true),
-    giveMeData(undefined),
-    giveMeData(null),
-    giveMeData(214234543654654576n),
-    // giveMeData(symbol),
-    giveMeData('87987'),
-    giveMeData(NaN),
-);

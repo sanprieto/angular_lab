@@ -165,25 +165,7 @@ En JavaScript, los valores de ciertos tipos de datos se pueden convertir o coerc
 ## Exercise Data types
 # Ejercicio: Sistema de Tipos de Datos y Conversión
 
-# Sistema de Gestión y Conversión de Tipos de Datos
+- Crear una función que devuelva el tipo de dato pasado por parámetro y que te diga las posible conversiones o valores que puede devolver.
 
-## Funcionalidades Esenciales
 
-### Entrada de Datos
-- El sistema debe permitir al usuario ingresar un dato para su análisis y conversión.
-
-### Identificación de Tipo de Dato
-- Automáticamente identificar el tipo de dato ingresado utilizando `typeof` o un método equivalente.
-
-### Opciones de Conversión
-- Presentar al usuario las posibles conversiones para el tipo de dato ingresado.
-
-### Realización de la Conversión
-- Ejecutar la conversión seleccionada por el usuario y mostrar el resultado.
-
-### Manejo de Errores
-- Proporcionar mensajes de error claros cuando el usuario intente una conversión no válida.
-
-### Control de Flujo
-- Utilizar estructuras condicionales (`if`, `else if`, `else`) para gestionar las conversiones y errores.
 
