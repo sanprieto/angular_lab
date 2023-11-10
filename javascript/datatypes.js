@@ -56,3 +56,5 @@ console.log(convertData(1))// number
 console.log(convertData(0))// number
 console.log(convertData(1.02))// number with decimal
 
+
+
