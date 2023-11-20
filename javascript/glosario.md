@@ -86,8 +86,29 @@
 
 4. **¿Cómo implementarías un servicio en Angular y para qué se utiliza?**
 
-   Los servicios en Angular se utilizan para escribir lógica de negocio, manipulación de datos y comunicación con servidores (como solicitudes HTTP). Se implementan como clases con el decorador @Injectable, lo que los hace candidatos para la inyección de dependencias en componentes y otros servicios. Esto promueve la reutilización de código y la separación de preocupaciones.
+   Un servicio es una clase con un propósito específico y bien definido. La idea principal de un servicio es encapsular lógicas de negocio, operaciones o funcionalidades comunes y hacerlas accesibles a diferentes componentes dentro de una aplicación. Esto promueve la reutilización de código, la separación de preocupaciones y facilita el mantenimiento y las pruebas unitarias.
 
+   **Funcionamiento y Propósito de un Servicio en Angular:**
+
+   1. Encapsulación de Lógica:
+
+      Un servicio puede contener métodos para realizar ciertas tareas, como interactuar con una base de datos, realizar cálculos complejos, o manejar operaciones HTTP.
+      Al separar esta lógica de los componentes, estos últimos se mantienen enfocados en la interacción con la vista (UI).
+   2. Reutilización de Código:
+
+      Al tener una lógica común en un servicio, se puede inyectar y utilizar este servicio en varios componentes, evitando la duplicidad de código.
+      Inyección de Dependencias:
+
+      Angular utiliza un sistema de inyección de dependencias para proporcionar instancias de servicios a componentes y otros servicios.
+      Un servicio se define como un provider en un módulo de Angular o en un componente, y Angular se encarga de crear y manejar las instancias de estos servicios.
+   2. Singleton y Alcance de Instancias:
+
+      Por defecto, un servicio es un singleton en Angular, lo que significa que una vez creado, la misma instancia del servicio se comparte en toda la aplicación.
+      Sin embargo, el alcance de un servicio puede configurarse para ser específico de un módulo o componente, creando así múltiples instancias si es necesario.
+   2. Pruebas y Mantenimiento:
+
+      Los servicios facilitan las pruebas unitarias ya que se pueden probar por separado de los componentes.
+      La separación de lógica también simplifica el mantenimiento del código, ya que los cambios en la lógica del servicio no requieren cambios en los componentes que lo utilizan.
 5. **Explique el sistema de inyección de dependencias en Angular.**
 
    La inyección de dependencias en Angular es un patrón de diseño en el que un objeto (como un servicio) proporciona las dependencias de otro objeto. Angular tiene su propio sistema de inyección de dependencias que gestiona la creación y entrega de dependencias (como servicios) a clases que las necesitan (como componentes). Esto aumenta la modularidad y la flexibilidad del código.
