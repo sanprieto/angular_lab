@@ -1,63 +1,95 @@
 1. **¿Qué es JavaScript?**  
-   Describe JavaScript como un lenguaje de programación interpretado, ligero y orientado a objetos que es comúnmente utilizado para añadir interactividad a las páginas web.
+   JavaScript es un lenguaje de programación interpretado, de tipado débil, que se ejecuta principalmente en el lado del cliente dentro de navegadores web. Es esencial para desarrollar páginas web interactivas y aplicaciones web modernas.
 
 2. **¿Cuál es la diferencia entre var, let y const?**  
-   Habla sobre el alcance (scope), la elevación (hoisting), y la reasignación de variables.
+   `var` declara variables con un ámbito de función, mientras `let` y `const` tienen un ámbito de bloque. `let` permite cambiar el valor de la variable, mientras que `const` se usa para declarar constantes cuyo valor no debe cambiar.
 
 3. **¿Qué es el hoisting en JavaScript?**  
-   Explica cómo las declaraciones de variables y funciones se mueven al inicio de su contexto de ejecución antes de la ejecución del código.
+   El hoisting es un comportamiento de JavaScript donde las declaraciones de variables y funciones son movidas al inicio de su contexto de ejecución, ya sea del script o de una función.
 
 4. **¿Qué son los tipos de datos en JavaScript?**  
-   Menciona tipos primitivos como undefined, null, boolean, number, string, symbol, y bigint, así como objetos.
+   JavaScript tiene varios tipos de datos, incluyendo primitivos como String, Number, Boolean, undefined, null, BigInt y Symbol, y objetos, que son colecciones de propiedades.
 
 5. **¿Qué es un closure en JavaScript?**  
-   Define los closures como una función que recuerda el ámbito en el que fue creada, incluso después de que el ámbito externo ha terminado.
+   Un closure es una función que recuerda el entorno en el que fue creada. Esto permite acceder a variables externas a la función, manteniendo su estado entre múltiples llamadas.
 
 6. **¿Cuál es la diferencia entre las funciones declarativas y las expresiones de función?**  
-   Comenta sobre cómo se define cada una y las diferencias en el hoisting.
+   Las funciones declarativas se nombran y se elevan durante la interpretación del código, permitiendo su uso antes de ser definidas. Las expresiones de función son anónimas y no se elevan.
 
 7. **¿Cómo funciona this en JavaScript?**  
-   Explica cómo el valor de this varía dependiendo del contexto de ejecución.
+   En JavaScript, `this` se refiere al contexto en el que se invoca una función. Su valor cambia según cómo se llama a la función: en métodos de objetos, en funciones globales o con `new`.
 
 8. **¿Qué son las Promesas y cómo las usas?**  
-   Habla sobre la programación asíncrona, qué son las Promesas y cómo manejan operaciones asíncronas.
+   Las Promesas en JavaScript representan una operación que aún no se ha completado, pero que se espera que lo haga en el futuro. Permiten escribir código asíncrono de forma más manejable.
 
 9. **¿Qué es async/await y cómo mejora el trabajo con operaciones asíncronas?**  
-   Explica cómo async/await simplifica la sintaxis para trabajar con Promesas.
+   `async/await` es una forma de manejar operaciones asíncronas en JavaScript. Permite escribir código asíncrono que parece sincrónico, mejorando la legibilidad y facilitando la gestión de errores.
 
 10. **¿Qué es el DOM en JavaScript?**  
-    Describe el Document Object Model (DOM) como una representación de la estructura de una página web que permite a JavaScript interactuar con ella.
+    DOM (Document Object Model) es una representación estructurada del contenido de una página web. JavaScript lo utiliza para interactuar y manipular el contenido y la estructura de una página.
 
 11. **¿Cómo agregas o eliminas un elemento del DOM usando JavaScript?**  
-    Muestra conocimiento sobre métodos como document.createElement, appendChild, removeChild, etc.
+    Para agregar elementos al DOM, se pueden usar métodos como `appendChild` o `insertBefore`. Para eliminar, se usa `removeChild` o `remove` en el elemento padre.
 
 12. **¿Qué es la delegación de eventos y por qué es útil?**  
-    Explica cómo manejar eventos en múltiples elementos con un único manejador de eventos en un elemento padre.
+    La delegación de eventos es una técnica para manejar eventos en múltiples elementos con un único manejador. Es útil para optimizar la memoria y manejar eventos en elementos dinámicos.
 
 13. **¿Qué son los patrones de diseño en JavaScript y podrías mencionar alguno?**  
-    Habla sobre patrones como Módulo, Constructor, Prototipo, Singleton, etc.
+    Los patrones de diseño en JavaScript son soluciones reutilizables para problemas comunes de programación. Ejemplos incluyen el patrón Módulo, Constructor, Singleton y Observador.
 
 14. **¿Qué son las transpilaciones y polifills en JavaScript?**  
-    Explica cómo se utilizan para asegurar la compatibilidad del código JavaScript en diferentes navegadores.
+    Las transpilaciones son el proceso de convertir código JavaScript moderno a versiones más antiguas para compatibilidad. Los polifills son fragmentos de código que implementan características modernas en navegadores antiguos.
 
 15. **¿Cuál es tu enfoque para depurar código JavaScript?**  
+    Para depurar JavaScript, utilizo herramientas como la consola del navegador, puntos de interrupción, y la inspección del DOM. También aplico técnicas como el logging y la revisión de código.
+
     Menciona herramientas como la consola del navegador, puntos de interrupción, y la inspección del DOM.
 
 #  Desarrollo Frontend en Angular
 
 ## Conocimientos Generales de Frontend
-1. ¿Qué es el DOM y cómo interactúa con JavaScript?
-2. Explique el modelo de caja en CSS.
-3. ¿Cómo aseguras la responsividad de tu diseño web?
-4. ¿Qué son las Progressive Web Apps (PWAs) y cómo se benefician de ellas?
-5. Explique cómo funciona el modelo de eventos en JavaScript.
+1. **¿Qué es el DOM y cómo interactúa con JavaScript?**
+
+   El DOM (Document Object Model) es una representación en forma de árbol de la estructura de un documento HTML. JavaScript interactúa con el DOM para manipular el contenido, la estructura y el estilo de las páginas web, permitiendo la creación de sitios web dinámicos.
+
+2. **Explique el modelo de caja en CSS.**
+
+   El modelo de caja en CSS describe cómo se estructuran los elementos HTML en términos de márgenes (margin), bordes (border), relleno (padding) y el contenido (content). Cada elemento se trata como una caja rectangular en la página, y este modelo determina cómo se distribuyen y alinean estos elementos.
+
+3. **¿Cómo aseguras la responsividad de tu diseño web?**
+
+   La responsividad se asegura utilizando diseños flexibles, unidades relativas (como porcentajes o em), media queries para aplicar estilos según el tamaño de la pantalla, y frameworks de CSS como Bootstrap. También es importante probar el diseño en múltiples dispositivos y resoluciones.
+
+4. **¿Qué son las Progressive Web Apps (PWAs) y cómo se benefician de ellas?**
+
+   Las Progressive Web Apps son aplicaciones web que ofrecen una experiencia similar a las aplicaciones nativas. Utilizan tecnologías web modernas para ser confiables (funcionan offline), rápidas y atractivas. Las PWAs pueden ser instaladas en dispositivos, enviar notificaciones push y acceder a ciertas características del hardware.
+
+5. **Explique cómo funciona el modelo de eventos en JavaScript.**
+
+   El modelo de eventos en JavaScript permite a los elementos HTML manejar eventos como clicks, teclado, ratón, etc. Los eventos se pueden escuchar y manejar mediante funciones. Este modelo permite la interactividad en las páginas web, donde los usuarios pueden interactuar con los elementos de la página y desencadenar acciones.
+
 
 ## Preguntas Específicas de Angular
-6. ¿Qué es Angular y cuáles son sus ventajas sobre otros frameworks?
-7. Explique el concepto de data binding en Angular.
-8. ¿Qué son los componentes en Angular y cómo se comunican entre sí?
-9. ¿Cómo implementarías un servicio en Angular y para qué se utiliza?
-10. Explique el sistema de inyección de dependencias en Angular.
+1. **¿Qué es Angular y cuáles son sus ventajas sobre otros frameworks?**
+
+   Angular es un framework de desarrollo para construir aplicaciones web de una sola página (SPA). Ofrece un enfoque basado en componentes, un potente sistema de enrutamiento, inyección de dependencias, y una integración robusta con TypeScript. Comparado con otros frameworks, Angular es conocido por su solidez y por ser una solución integral que incluye todo lo necesario para construir aplicaciones grandes y escalables.
+
+2. **Explique el concepto de data binding en Angular.**
+
+   El data binding en Angular es un mecanismo para sincronizar datos entre el modelo (lógica de negocio) y la vista (interfaz de usuario). Hay varios tipos: "Interpolation" ({{ }}) para mostrar datos, "Property Binding" para vincular propiedades de elementos HTML a datos del componente, "Event Binding" para responder a eventos del usuario en la vista, y "Two-way Binding" (ngModel) que combina property y event binding para una sincronización bidireccional.
+
+3. **¿Qué son los componentes en Angular y cómo se comunican entre sí?**
+
+   Los componentes en Angular son bloques fundamentales de la aplicación y encapsulan datos, lógica y la vista. Cada componente tiene su HTML, CSS y TypeScript asociados. Los componentes se comunican entre sí principalmente a través de "Input" y "Output" properties, donde un componente padre envía datos a un componente hijo (Input) y el hijo puede enviar datos de vuelta al padre (Output) a través de eventos.
+
+4. **¿Cómo implementarías un servicio en Angular y para qué se utiliza?**
+
+   Los servicios en Angular se utilizan para escribir lógica de negocio, manipulación de datos y comunicación con servidores (como solicitudes HTTP). Se implementan como clases con el decorador @Injectable, lo que los hace candidatos para la inyección de dependencias en componentes y otros servicios. Esto promueve la reutilización de código y la separación de preocupaciones.
+
+5. **Explique el sistema de inyección de dependencias en Angular.**
+
+   La inyección de dependencias en Angular es un patrón de diseño en el que un objeto (como un servicio) proporciona las dependencias de otro objeto. Angular tiene su propio sistema de inyección de dependencias que gestiona la creación y entrega de dependencias (como servicios) a clases que las necesitan (como componentes). Esto aumenta la modularidad y la flexibilidad del código.
+
 
 ## Preguntas Técnicas y de Código
 11. ¿Cómo crearías una directiva personalizada en Angular?
