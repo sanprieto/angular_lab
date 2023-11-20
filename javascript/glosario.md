@@ -1,3 +1,5 @@
+# Javascript fundamentos
+
 1. **¿Qué es JavaScript?**  
    JavaScript es un lenguaje de programación interpretado, de tipado débil, que se ejecuta principalmente en el lado del cliente dentro de navegadores web. Es esencial para desarrollar páginas web interactivas y aplicaciones web modernas.
 
@@ -69,7 +71,7 @@
    El modelo de eventos en JavaScript permite a los elementos HTML manejar eventos como clicks, teclado, ratón, etc. Los eventos se pueden escuchar y manejar mediante funciones. Este modelo permite la interactividad en las páginas web, donde los usuarios pueden interactuar con los elementos de la página y desencadenar acciones.
 
 
-## Preguntas Específicas de Angular
+## Angular
 1. **¿Qué es Angular y cuáles son sus ventajas sobre otros frameworks?**
 
    Angular es un framework de desarrollo para construir aplicaciones web de una sola página (SPA). Ofrece un enfoque basado en componentes, un potente sistema de enrutamiento, inyección de dependencias, y una integración robusta con TypeScript. Comparado con otros frameworks, Angular es conocido por su solidez y por ser una solución integral que incluye todo lo necesario para construir aplicaciones grandes y escalables.

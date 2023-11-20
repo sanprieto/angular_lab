@@ -1,25 +1,25 @@
 # Javascript
 - JavaScript fundamentals
-   - [Data types](#Data-types-javascript)
-   - [Javascript Functions](#Functions-javascript)
-   - Objects
-   - Event
-   - Strings
-   - Arrays
-   - For, For in, For Of, For Each, While
-   - Iterating
-   - Maps
-   - JavaScript Errors
-   - This
-   - Arrow functions
-   - Clases, Herencia y Polimorfismo
-   - Modules
-   - JavaScript JSON
-   - JavaScript Reserved Words
+   1. [Data types](#Data-types-javascript)
+   1. [Javascript Functions](#javascript-functions)
+   1. Objects
+   1. Event
+   1. Strings
+   1. Arrays
+   1. For, For in, For Of, For Each, While
+   1. Iterating
+   1. Maps
+   1. JavaScript Errors
+   1. This
+   1. Arrow functions
+   1. Clases, Herencia y Polimorfismo
+   1. Modules
+   1. JavaScript JSON
+   1. JavaScript Reserved Words
 - Asincronía
-    - Callbacks: El concepto básico detrás de la asincronía en JavaScript.
-    - Promesas: Un enfoque más moderno para manejar la asincronía.
-    - async/await: La forma más nueva y legible de manejar operaciones asíncronas. 
+    1. Callbacks: El concepto básico detrás de la asincronía en JavaScript.
+    1. [Promesas](#javascript-promise) Un enfoque más moderno para manejar la asincronía.
+    1. async/await: La forma más nueva y legible de manejar operaciones asíncronas. 
 - APIs Web
     - Fech
     - Local Storage
@@ -379,3 +379,10 @@ Utiliza una IIFE para iniciar el sistema, creando algunas tareas de ejemplo y mo
 ## Resultado Esperado
 
 Al final del ejercicio, deberías tener un sistema funcional de gestión de tareas que utilice distintos tipos de funciones en JavaScript, demostrando tu comprensión sobre cuándo y cómo usar cada una de ellas.
+
+# javascript promise
+
+Las promesas en JavaScript son objetos utilizados para manejar **operaciones asíncronas**. Permiten escribir código que eventualmente producirá un resultado (exitoso o erróneo) sin bloquear la ejecución del programa mientras se espera ese resultado. Una promesa puede encontrarse en uno de **tres estados**: **pendiente** (no se ha cumplido ni rechazado aún), **cumplida** (la operación se completó exitosamente), o **rechazada** (la operación falló).
+
+La principal ventaja de las promesas es que mejoran la legibilidad y manejo del código asíncrono, comparado con los enfoques más antiguos como los callbacks. Las promesas ofrecen métodos como **then() y catch()**. El método **then()** se utiliza para especificar qué debe suceder una vez que la promesa se cumple, mientras que **catch()** se usa para manejar errores en caso de que la promesa sea rechazada. Además, el método **finally()** puede ser utilizado para ejecutar código independientemente del resultado de la promesa.
+
