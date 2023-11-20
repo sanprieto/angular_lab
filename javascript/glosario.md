@@ -115,11 +115,89 @@
 
 
 ## Preguntas Técnicas y de Código
-11. ¿Cómo crearías una directiva personalizada en Angular?
-12. Explique cómo funcionan las rutas en Angular.
-13. ¿Cómo manejarías el estado en una aplicación Angular?
-14. ¿Cómo optimizarías el rendimiento de una aplicación Angular?
-15. Demuestre cómo usaría observables y RxJS en Angular.
+   1. ## ¿Cómo crearías una directiva personalizada en Angular?
+      ```typescript
+      import { Directive, ElementRef, Input } from '@angular/core';
+
+         @Directive({
+         selector: '[appCambiarColor]'
+         })
+         export class CambiarColorDirective {
+         @Input('appCambiarColor') color: string;
+
+         constructor(private el: ElementRef) {
+         }
+
+         ngOnInit() {
+            this.el.nativeElement.style.color = this.color || 'black';
+         }
+      }
+      ```
+         ```html
+      <p appCambiarColor="blue">Este texto será de color azul.</p>
+
+      ```
+   1. ## Explique cómo funcionan las rutas en Angular.
+
+
+      En Angular, las rutas permiten navegar entre diferentes vistas o componentes dentro de una aplicación de una sola página (SPA). El sistema de enrutamiento de Angular es muy potente y flexible, proporcionando una forma de cargar diferentes componentes en función de la URL del navegador. A continuación se explica cómo funciona este sistema:
+
+      ## Componentes Clave del Enrutamiento en Angular:
+
+         1. **`RouterModule`:**
+            - Angular proporciona el `RouterModule` que se utiliza para configurar y manejar las rutas.
+            - Este módulo se importa en el módulo principal de la aplicación (usualmente `AppModule`) o en módulos de funcionalidades.
+
+         2. **Configuración de Rutas:**
+            - Las rutas se definen como un array de objetos `Route`, donde cada objeto configura una ruta específica.
+            - Cada `Route` asocia una URL (o patrón de URL) con un componente que se debe mostrar cuando se navega a esa URL.
+
+         3. **`<router-outlet>`:**
+            - Es un componente de Angular que actúa como un marcador de posición, donde se cargan los componentes de las rutas.
+            - Se coloca generalmente en el archivo de plantilla del componente principal (`app.component.html`).
+
+         4. **`RouterLink` y `RouterLinkActive`:**
+            - Directivas que se utilizan en plantillas para crear enlaces de navegación.
+            - `RouterLinkActive` permite aplicar una clase CSS a un enlace cuando su ruta está activa.
+
+         5. **Servicio `Router`:**
+            - Un servicio que permite navegar entre rutas de manera programática desde los componentes.
+
+         ## Ejemplo Básico de Configuración de Rutas:
+
+            ```typescript
+            import { NgModule } from '@angular/core';
+            import { RouterModule, Routes } from '@angular/router';
+            import { HomeComponent } from './home/home.component';
+            import { AboutComponent } from './about/about.component';
+
+            const routes: Routes = [
+            { path: 'home', component: HomeComponent },
+            { path: 'about', component: AboutComponent },
+            { path: '', redirectTo: '/home', pathMatch: 'full' } // Redirige a 'home' si la ruta es vacía
+            ];
+
+            @NgModule({
+            imports: [RouterModule.forRoot(routes)],
+            exports: [RouterModule]
+            })
+            export class AppRoutingModule { }
+
+   1. ## ¿Cómo manejarías el estado en una aplicación Angular?
+      En Angular, el manejo del estado se puede realizar de varias maneras. Una de las formas más comunes es utilizando el servicio ngrx/store, que implementa un patrón de administración de estado basado en la arquitectura Redux. Con ngrx/store, puedes crear un store centralizado donde se almacena el estado de la aplicación y luego utilizar acciones y reducers para actualizar y acceder a ese estado de manera predecible. Esto facilita la gestión del estado en aplicaciones grandes y complejas.
+   1. ## ¿Cómo optimizarías el rendimiento de una aplicación Angular?
+   Para optimizar el rendimiento de una aplicación Angular, se pueden seguir varias estrategias:
+
+   Lazy Loading: Divide la aplicación en módulos y carga los módulos de forma perezosa, es decir, solo cuando se necesitan. Esto reduce el tiempo de carga inicial.
+
+   AOT Compilation: Utiliza la compilación Ahead-of-Time (AOT) en lugar de la compilación Just-in-Time (JIT) para mejorar el tiempo de carga y el rendimiento general.
+
+   Change Detection Strategy: Utiliza la estrategia de detección de cambios OnPush en los componentes para minimizar las comprobaciones de cambios innecesarias.
+
+   Optimización de imágenes y recursos: Comprime y optimiza imágenes y otros recursos para reducir el tamaño de descarga de la aplicación.
+
+   Minimiza las solicitudes HTTP: Reduce el número de solicitudes HTTP combinando archivos, utilizando caché y aplicando técnicas de carga diferida.
+   1. ## Demuestre cómo usaría observables y RxJS en Angular.
 
 ## Preguntas de Pruebas y Debugging
 16. ¿Cómo realizas pruebas en tus aplicaciones Angular?
